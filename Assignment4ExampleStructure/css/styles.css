@@ -1,0 +1,78 @@
+body{
+    width: 70%;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: justify;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
+    margin-top: 25px;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 25px;
+}
+
+p{
+    margin: 2px;
+    margin-left: 15px;
+}
+
+span{
+    margin: 2px;
+    margin-left: 15px;
+}
+
+ul{
+    margin: 10px 10px 10px 20px;
+}
+
+ol{
+    margin: 10px 10px 10px 20px;
+    list-style: decimal;
+    outside: none;
+}
+
+ul li{
+    list-style: circle;
+    display: list-item;
+    list-style-position: inside;
+}
+
+ol li{
+    list-style: decimal;
+    list-style-position: inside;
+    outside: none;
+    display: list-item;
+}
+
+a{
+    font-style: italic;
+}
+
+.container>.container{
+    margin-left: 15px;
+}
+
+.container>.container>.container{
+    margin-left: 15px;
+}
+
+.main-title{
+    font-size: 28px;
+    width: 100%;
+    text-align: center
+}
