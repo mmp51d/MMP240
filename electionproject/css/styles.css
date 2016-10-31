@@ -486,4 +486,40 @@ vertical-align: middle;
     height: 50px;
     top: 0px;
   }
+  
+  .image-cropper {
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0;
+  }
+  
+  .image-cropper img{
+      display: block;
+    margin: 0 auto;
+    height: auto;
+     width: 150%; 
+    margin: 0 0 0 -20%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0px;
+  align: middle;
+  vertical-align: middle;
+  }
+  
+  .container{
+    font-size: 5vmin;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    margin: 15px auto;
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    width: 90%;
+    background: rgba(226, 241, 255, 0.75);
+  }
 }
