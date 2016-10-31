@@ -20,8 +20,9 @@ See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box
 html {
   box-sizing: border-box;
   background-image: url("../img/bg.jpg");
-  background-position: fixed;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -296,11 +297,20 @@ header .menu .active{
 .container .events td{
     border-top: 1px solid grey;
     margin: 0px;
-    padding: 7px 5px 5px 5px ;
+    padding: 7px 10px 5px 10px ;
     min-height: 15px;
     font-size: 3vmin;
 }
 
+.container p, .container li, .container span{
+  display: block;
+  margin: 15px 0px 15px 0px;
+  font-size: 3vmin;
+  text-align: left
+}
+.container ul{
+  padding-left: 0px;
+}
 .home_events{
     padding: 5px 0px 5px 0px;
 }
@@ -348,4 +358,55 @@ header .menu .active{
   margin-top: 10px;
   font-weight: 900;
   margin: 0px;
+}
+
+/** Accordion */
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: inherit;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 5000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+div.panel ul{
+  padding-left: 10px;
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }

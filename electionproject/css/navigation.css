@@ -40,6 +40,9 @@
     clear: both;
     display: none;
     /*hidden to start */
+position: fixed;
+z-index: 999;
+width: 100%;
 }
 
 #main_nav ul {
