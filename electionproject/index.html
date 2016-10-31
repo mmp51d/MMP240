@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - NYC Votes</title>
+    <link rel="stylesheet" href="css/normalized-reset.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
+        <!-- styles the navigation, can change or replace -->
+</head>
+<body>
+    <header>
+
+        <!--<ul class="menu" >
+            <li id="menu_home" class="item active" onclick="display('menu')">Home</li>
+            <li id="menu_register" class="item" onclick="display('menu')">Register to Vote</li>
+            <li id="menu_election-day" class="item" onclick="display('menu')">Election Day</li>
+            <li id="menu_candidates" class="item" onclick="display('menu')">Candidates</li>
+            <li id="menu_events" class="item" onclick="display('menu')">Events</li>
+            <li id="menu_resources" class="item" onclick="display('menu')">Resources</li>
+            <li id="menu_about" class="item" onclick="display('menu')">About</li>
+        </ul>-->
+        <a name="top"></a>
+        <div class="top-header">
+            <div class="vote9">
+                <h3>G.O.T.</h3>
+                <h2>VOTE</h2>
+                <h3>NYC<span>&#10004;</span></h3>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#" id="menu_button">Menu</a>
+        </div>
+
+        <nav id="main_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Register to Vote</a></li>
+                <li><a href="#">Elections Day</a></li>
+                <li><a href="#">Candidated</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+        
+    
+    
+    <div class="container" id="countdown">
+        TIME LEFT UNTIL ELECTION DAY
+        <div id="time"></div>
+        
+    </div>
+    
+    <div class="container home_events">
+        Dates
+        <div class="scroll">
+            <table class="events" cellspacing="0px">
+                    <tr>
+                        <td>General Election: November 8, 2016</td>
+                    </tr>
+                    <tr>
+                        <td>Registration Deadline: Friday, October 14, 2016</td>
+                    </tr>
+                    <tr>
+                        <td>Third Presidential Debate: Wednesday, October 19, 2016<br>
+                        It will be on all of the major networks (ABC, NBC, Fox, CBS, MSNBC, Fox News, Fox Business, CNN, Univision, Telemundo, and C-SPAN), online livestreamed on Twitter http://debates.twitter.com, Facebook and YouTube and on radio WNYC 93.9 FM or http://www.wnyc.org/</td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container link">
+        How to Register
+    </div>
+    <div class="container link">
+        Voting Information
+    </div>
+    <div class="container link">
+        Information about Candidates
+    </div>
+    <div class="container link">
+        Upcoming Events
+    </div>
+    <div class="container link">
+        Election Resources
+    </div>
+</body>
+<script src="js/scripts.js" type="text/javascript"></script>
+<script src="js/navigation.js" type="text/javascript"></script>
+
+<script> timer("time"); </script>
+    <!-- Make sure your content is done before this -->
+
+    <!-- Load CDN version of jQuery. For other versions visit this page: https://code.jquery.com/jquery/ -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!--    Load Local version if CDN is not working-->
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/modernizr2.8.3.min.js"></script>
+
+    <!--   Your jQuery and other JavaScript can go here in this script element. -->
+    <script>
+        jQuery(document).ready(function ($) {
+
+            /* 
+               This is the code to slide the main navigation up and down.
+            */
+
+            $('#menu_button').click(function (evt) {
+                console.log('evt', evt);
+                evt.preventDefault();
+                $('#main_nav').slideToggle();
+            }); //end menu_button
+
+
+            //this code taken from Sebastien on Stackoverflow: http://stackoverflow.com/questions/6461300/triggering-jquery-with-css-media-queries
+            //it's been rearranged slightly
+            //leave the lines below and then write your code in the doneResizing function below
+            doneResizing();
+            var id;
+            $(window).resize(function () {
+                clearTimeout(id);
+                id = setTimeout(doneResizing, 0);
+            });
+
+            function doneResizing() {
+                //this code requires that you have Modernizr included BEFORE this file. Here is modernizr: http://modernizr.com/
+                //the trick with min-width media queries is that you need to start from your largest and go down. In the else at the end you can write  js for any size below your smallest min-width.
+
+                 if (Modernizr.mq('screen and (min-width:45em)')) {
+                    $('#main_nav').show(); //make sure it is showing at larger sizes
+                } else {
+                    //Your code goes here for screens below 45em in this example. 
+                    $('#main_nav').hide(); //make sure hiding at smaller sizes
+                }
+            } //end doneResizing
+
+        });
+    </script>
+<script>
+    function display(id) {
+        if (document.getElementById(id).style.display == 'none') {
+            document.getElementById(id).style.display = 'block';
+        } else {
+            document.getElementById(id).style.display = 'none';
+        }
+    }
+</script>
+</html>
