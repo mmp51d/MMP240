@@ -1,0 +1,58 @@
+#main_nav {
+  clear: both;
+  display: none; }
+  #main_nav ul {
+    list-style: none;
+    line-height: 1;
+    margin: 0;
+    padding: 0; }
+  #main_nav li a {
+    display: block;
+    color: #fff;
+    background-color: #555;
+    text-transform: uppercase;
+    padding: 0.625em;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 900; }
+    #main_nav li a:hover {
+      color: #555;
+      background-color: #fff; }
+    #main_nav li a:active {
+      color: #555;
+      background-color: #f90; }
+
+/* ====== Variables ====== */
+.body {
+  color: #ff3300; }
+
+a {
+  color: blue; }
+
+/* ====== Operators ====== */
+.main {
+  width: 62.5%;
+  float: left; }
+
+.sidebar {
+  width: 37.5%;
+  float: right; }
+
+/* ====== Mixins ====== */
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid blue;
+  padding: 10px; }
+
+.rounded {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
+  border: 2px solid blue;
+  padding: 10px; }
+
+/*# sourceMappingURL=style.css.map */

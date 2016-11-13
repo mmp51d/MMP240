@@ -1,0 +1,45 @@
+/* ====== Variables ====== */
+$primary-color: #ff3300;
+$link-color: blue;
+
+.body{
+  color: $primary-color;
+}
+
+a{
+  color:$link-color;
+}
+
+
+/* ====== Operators ====== */
+
+.main{
+  width: 600px / 960px * 100%;
+  float: left;
+}
+
+.sidebar{
+  width: 360px / 960px * 100%;
+  float: right;
+}
+
+/* ====== Mixins ====== */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { 
+    @include border-radius(10px); //10px border radius
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.rounded{
+    @include border-radius(60px); //60px border radius
+    border: 2px solid blue;
+    padding: 10px;
+    
+}
